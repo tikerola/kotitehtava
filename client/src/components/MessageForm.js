@@ -14,15 +14,8 @@ const MessageForm = ({ setDatabaseUpdated }) => {
   const submit = async event => {
     event.preventDefault()
 
-    if (!message) {
-      setError('You have to write something!')
-
-      setTimeout(() => {
-        setError('')
-      }, 3000)
-
+    if (!isValid())
       return
-    }
 
     await axios.post('/api/messages', {
       text: message
@@ -31,6 +24,21 @@ const MessageForm = ({ setDatabaseUpdated }) => {
     setDatabaseUpdated(prevCount => prevCount + 1)
     setMessage('')
   }
+
+
+  const isValid = () => {
+    if (!message) {
+      setError('You have to write something!')
+
+      setTimeout(() => {
+        setError('')
+      }, 3000)
+
+      return false
+    }
+    return true
+  }
+
 
   return (
     <div className="message-form-container">
