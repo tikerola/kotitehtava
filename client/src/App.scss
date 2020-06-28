@@ -23,9 +23,11 @@
 
   & img:hover {
     animation: shake 0.5s;
-
-
     animation-iteration-count: infinite;
+  }
+
+  & img:active {
+    opacity: 0.5;
   }
 }
 
