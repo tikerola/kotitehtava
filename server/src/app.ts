@@ -6,6 +6,8 @@ import { deleteMessagesRouter } from './routes/delete';
 import cors from 'cors';
 
 const app = express();
+app.use(express.static('build'));
+
 app.use(json());
 app.use(cors());
 
