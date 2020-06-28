@@ -1,0 +1,62 @@
+.messages-container {
+  box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+
+  overflow: auto;
+  background-color: #d4adcf;
+  padding: 30px;
+  border: 2px dashed white;
+  border-radius: 5px;
+
+  & h2 {
+    text-decoration: underline;
+    align-self: center;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  & img {
+    width: 150px;
+  }
+}
+
+
+.messages-list {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0;
+}
+
+.messages-list-item {
+  margin-bottom: 7px;
+  position: relative;
+
+  & img {
+    width: 20px;
+    height: 20px;
+  }
+
+  & hr {
+    border: none;
+    border-top: 1px solid #999;
+    animation: line 1s 1 backwards;
+    position: relative;
+    top: 55%;
+    left: 0;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+.message-form-container {
+  box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  border: 2px dashed white;
+  border-radius: 5px;
+  background-image: url('../assets/images/pen1.png');
+  background-blend-mode: darken;
+
+  background-size: initial;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+
+  background-color: #f49cbb;
+
+
+  & h2 {
+    text-decoration: underline;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+  }
+
+  & input {
+    outline: none;
+    font-family: 'Permanent Marker', cursive;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+}
